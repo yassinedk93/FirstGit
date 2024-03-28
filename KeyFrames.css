@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+.container {
+  display: grid;
+  grid-template-rows: 350px 1fr 1fr; /* Each row takes up an equal fraction of the available space */
+  height: 100vh; /* Ensure the container fills the viewport height */
+}
+
+
+
+.sky {
+  background-image: linear-gradient(rgb(37, 96, 224), lightblue);
+}
+
+.grass {
+  background-color: rgba(0, 62, 0, 0.5); 
+  
+}
+
+.road {
+  background-color: rgb(107, 107, 107);
+  background: dimgrey;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  position: relative; /* Added position relative */
+}
+.liens {
+  position: absolute; /* Set position to absolute */
+  top: 45%; /* Position the dotted line vertically */
+  width: 100%;
+  border-width: 2px; 
+  border: 5px dashed #fff;
+  height: 6px;
+  z-index: 1; /* Set a lower z-index to make the dotted line appear below Mario */
+}
+
+.mario {
+  
+  position: absolute;
+  top: -40px;
+  left:0;
+  animation-name: drive;
+  animation-duration: 7s;
+}
+@keyframes drive{
+  from{ transform: translateX(0)}
+  to{ transform: translateX(1300px)}
+}
